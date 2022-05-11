@@ -1,1 +1,19 @@
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2213_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("RELATED_QUERIES", {"comparisonItem":[{"keyword":"Stack Overflow","geo":"","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=Stack%20Overflow&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2213_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+
+const params = new URLSearchParams(window.location.q); //parse params
+const sorgu = params.get("sorgu"); //get q param
+
+  trends.embed.renderExploreWidget("RELATED_QUERIES", {
+    "comparisonItem": [{
+      "keyword": sorgu,
+      "geo": "",
+      "time": "today 12-m"
+    }],
+    "category": 0,
+    "property": ""
+  }, {
+    "exploreQuery": "q=" + sorgu +"&date=today 12-m",
+    "guestPath": "https://trends.google.com:443/trends/embed/"
+  });
+</script>
